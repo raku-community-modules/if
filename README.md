@@ -1,7 +1,7 @@
 if - conditionally use packages
 ==
 if, similar to Perl 5's pragma if will let you conditionally load packages.
-Use cases (no pun intended)  are about loading different implementations of a funtionality
+Use cases (no pun intended)  are about loading different implementations of a functionality
 for different operating systems, compiler backends, or compiler versions.
 
 This means that these switches for different implementations do not happen at runtime,

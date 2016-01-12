@@ -1,4 +1,4 @@
-if - conditionally use packages
+if - conditionally use packages [![Build Status](https://secure.travis-ci.org/FROGGS/p6-if.svg?branch=master)](http://travis-ci.org/FROGGS/p6-if)
 ==
 if, similar to Perl 5's pragma if will let you conditionally load packages.
 Use cases (no pun intended)  are about loading different implementations of a functionality

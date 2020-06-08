@@ -23,5 +23,5 @@ use My::Fallback::Backend:if($*KERNEL.name ne 'linux');
 INSTALLATION
 --
 ```bash
-panda install if
+zef install if
 ```

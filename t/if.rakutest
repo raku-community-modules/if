@@ -1,14 +1,13 @@
-use v6;
 use Test;
 plan 5;
 
 use lib 't/lib';
 
 does-load-bar    'use Bar',                                    'a bare use still works';
-does-load-bar    'use if; use Bar',                            'a bare use after loading if.pm works';
+does-load-bar    'use if; use Bar',                            'a bare use after loading if works';
 doesn't-load-bar 'use if; use Bar:if(0)',                      ':if(0) prevents loading a package';
-does-load-bar    'use if; use Bar:if($*PERL.version ~~ v6.*)', 'we can use $*PERL.version in :if';
-doesn't-load-bar 'use if; use Bar:if($*PERL.version ~~ v7)',   'we can use $*PERL.version in :if';
+does-load-bar    'use if; use Bar:if($*RAKU.version ~~ v6.*)', 'we can use $*RAKU.version in :if';
+doesn't-load-bar 'use if; use Bar:if($*RAKU.version ~~ v7)',   'we can use $*RAKU.version in :if';
 
 sub does-load-bar {
     my $*PACKAGE_LOADED = 0;
@@ -21,3 +20,5 @@ sub doesn't-load-bar {
     EVAL $^code;
     is $*PACKAGE_LOADED, 0, $^comment
 }
+
+# vim: expandtab shiftwidth=4

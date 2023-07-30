@@ -1,13 +1,23 @@
 {
-    "perl"        : "6.*",
-    "name"        : "if",
-    "version"     : "0.1.1",
-    "author"      : "github:FROGGS",
-    "description" : "conditionally use packages",
-    "depends"     : [ ],
-    "provides"    : {
-        "if" : "lib/if.pm"
-    },
-    "source-url"  : "git://github.com/FROGGS/p6-if.git"
+  "auth": "zef:raku-community-modules",
+  "author": "Tobias Leich",
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "Conditionally load a distribution",
+  "license": "Artistic-2.0",
+  "name": "if",
+  "perl": "6.*",
+  "provides": {
+    "if": "lib/if.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "git://github.com/raku-community-modules/if.git",
+  "tags": [
+  ],
+  "test-depends": [
+  ],
+  "version": "0.1.2"
 }
-

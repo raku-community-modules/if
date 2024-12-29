@@ -1,7 +1,8 @@
 use Test;
+
 plan 5;
 
-use lib 't/lib';
+use lib $*PROGRAM.sibling("lib");
 
 does-load-bar    'use Bar',                                    'a bare use still works';
 does-load-bar    'use if; use Bar',                            'a bare use after loading if works';

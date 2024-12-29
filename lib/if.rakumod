@@ -57,12 +57,16 @@ if - Conditionally load a distribution
 
 =head1 SYNOPSIS
 
-    use if; # activate the :if adverb on use statements
+=begin code :lang<raku>
 
-    use My::Linux::Backend:if($*KERNEL.name eq 'linux');
-    use My::Fallback::Backend:if($*KERNEL.name ne 'linux');
+use if; # activate the :if adverb on use statements
 
-    # ... do something with the backend you got
+use My::Linux::Backend:if($*KERNEL.name eq 'linux');
+use My::Fallback::Backend:if($*KERNEL.name ne 'linux');
+
+# ... do something with the backend you got
+
+=end code
 
 =head1 DESCRIPTION
 
@@ -82,12 +86,12 @@ several backends using this technique.
 
 =head1 AUTHOR
 
-Tobias "FROGGS" Leich
+Tobias Leich
 
 =head1 COPYRIGHT AND LICENSE
 
 Copyright 2016-2020 Tobias Leich
-Copyright 2023 Raku Community
+Copyright 2023, 2024 Raku Community
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 

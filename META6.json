@@ -15,7 +15,7 @@
   "resources": [
   ],
   "source-url": "git://github.com/raku-community-modules/if.git",
-  "tags": [
+  "tags": [ "MODULE", "NAUGHTY"
   ],
   "test-depends": [
   ],

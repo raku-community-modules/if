@@ -14,10 +14,12 @@
   },
   "resources": [
   ],
-  "source-url": "git://github.com/raku-community-modules/if.git",
-  "tags": [ "MODULE", "NAUGHTY"
+  "source-url": "https://github.com/raku-community-modules/if.git",
+  "tags": [
+    "MODULE",
+    "NAUGHTY"
   ],
   "test-depends": [
   ],
-  "version": "0.1.2"
+  "version": "0.1.3"
 }

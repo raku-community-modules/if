@@ -1,3 +1,4 @@
+
 my role BetterWorld {
     method do_pragma_or_load_module(Mu $/ is raw, $use, $thisname?) {
         my $name;
@@ -43,8 +44,49 @@ my role BetterWorld {
     }
 }
 
+my role Actions {
+    use experimental :rakuast;
+
+    method statement-control:sym<use>(Mu $/) {
+        if $/.hash<module-name>.ast -> $ast {
+            if my @cp = $ast.colonpairs {
+                my $last := @cp.pop;
+                if $last.key eq 'if' {
+                    my $value := RakuAST::BeginTime.IMPL-BEGIN-TIME-EVALUATE(
+                      $last.value, $*R, $*CU.context
+                    );
+                    if $value.defined {
+                        if $value {
+                            $ast.set-colonpairs(@cp.FLATTENABLE_LIST);
+                        }
+                        else {
+                            self.attach: $/, RakuAST::Statement::Empty.new;
+                            return;
+                        }
+                    }
+                    else {
+                        $/.panic("Did not provide compile-time-value for :if adverb in use statement");
+                    }
+                }
+            }
+        }
+
+        nextsame;
+    }
+}
+
 sub EXPORT(|) {
-    $*W.HOW.mixin($*W, BetterWorld) if Raku.legacy;
+    if Raku.legacy {
+        $*W.HOW.mixin($*W, BetterWorld);
+    }
+    else {
+        my $LANG := $*LANG;
+        $LANG.define_slang('MAIN',
+          $LANG.slang_grammar('MAIN'),
+          $LANG.slang_actions('MAIN').^mixin(Actions)
+        );
+    }
+
     BEGIN Map.new
 }
 

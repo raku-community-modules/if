@@ -1,5 +1,6 @@
 use Test::Coverage;
 
+todo "Need to figure out a way to test (non) RakuAST";
 must-be-complete;
 
 # vim: expandtab shiftwidth=4

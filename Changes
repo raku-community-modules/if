@@ -1,6 +1,8 @@
 Revision history for if
 
 {{$NEXT}}
+
+0.1.4  2026-07-31T12:36:19+02:00
     - Make the module be a no-op in RakuAST (at least for
       now since there is a chance that RakuAST will just
       handle the "if" pragma in core).

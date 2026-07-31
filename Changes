@@ -1,6 +1,12 @@
 Revision history for if
 
 {{$NEXT}}
+    - Make the module be a no-op in RakuAST (at least for
+      now since there is a chance that RakuAST will just
+      handle the "if" pragma in core).
+    - Add coverage testing
+    - Modernize META
+    - Update copyright year
 
 0.1.3  2024-12-29T19:58:55+01:00
     - Add CI badge for each OS

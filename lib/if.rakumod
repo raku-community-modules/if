@@ -44,25 +44,30 @@ my role BetterWorld {
     }
 }
 
-use experimental :rakuast;
-
-# The value of the :if adverb, from running its expression in the scope
-# of the use statement.
-my sub evaluate($colonpair) {
-    return True  if $colonpair ~~ RakuAST::ColonPair::True;
-
-    my $block := RakuAST::Block.new(
-      body => RakuAST::Blockoid.new(
-        RakuAST::StatementList.new(
-          RakuAST::Statement::Expression.new(expression => $colonpair.value)
-        )
-      )
-    );
-    $block.to-begin-time($*R, $*CU.context);
-    $block.meta-object()()
-}
-
 my role Actions {
+
+    use experimental :rakuast;
+
+    # The value of the :if adverb, from running its expression in the scope
+    # of the use statement.
+    my sub evaluate($colonpair) {
+        if $colonpair ~~ RakuAST::ColonPair::True {
+            True
+        }
+        else {
+            my $block := RakuAST::Block.new(
+              body => RakuAST::Blockoid.new(
+                RakuAST::StatementList.new(
+                  RakuAST::Statement::Expression.new(
+                    expression => $colonpair.value
+                  )
+                )
+              )
+            );
+            $block.to-begin-time($*R, $*CU.context);
+            $block.meta-object()()
+        }
+    }
 
     method statement-control:sym<use>(Mu $/) {
         if $/.hash<module-name>.ast -> $ast {

@@ -4,7 +4,7 @@
   "specVersion": "1.6",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-07-31T19:32:57+00:00",
+    "timestamp": "2026-09-19T18:34:03+00:00",
     "lifecycles": [
       {
         "phase": "pre-build"
@@ -19,7 +19,7 @@
     "component": {
       "type": "library",
       "mime-type": "text/plain",
-      "bom-ref": "pkg:raku/zef:raku-community-modules/if@0.1.5",
+      "bom-ref": "pkg:raku/zef:raku-community-modules/if@0.1.6",
       "authors": [
         {
           "bom-ref": "TobiasLeich",
@@ -29,7 +29,7 @@
       "publisher": "zef",
       "group": "zef:raku-community-modules",
       "name": "if",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "description": "Conditionally load a distribution",
       "scope": "required",
       "licenses": [
@@ -41,14 +41,14 @@
           }
         }
       ],
-      "purl": "pkg:raku/zef:raku-community-modules/if@0.1.5",
+      "purl": "pkg:raku/zef:raku-community-modules/if@0.1.6",
       "externalReferences": [
         {
           "url": "https://github.com/raku-community-modules/if",
           "type": "distribution"
         },
         {
-          "url": "https://raku.land/zef:raku-community-modules/if?v=0.1.5",
+          "url": "https://raku.land/zef:raku-community-modules/if?v=0.1.6",
           "type": "documentation"
         },
         {
@@ -60,7 +60,7 @@
           "type": "license"
         },
         {
-          "url": "https://github.com/raku-community-modules/if/archive/refs/tags/0.1.5.zip",
+          "url": "https://github.com/raku-community-modules/if/archive/refs/tags/0.1.6.zip",
           "type": "source-distribution"
         },
         {
@@ -87,7 +87,7 @@
         {
           "type": "library",
           "mime-type": "text/plain",
-          "bom-ref": "pkg:raku/zef:lizmat/SBOM::Raku@0.0.13",
+          "bom-ref": "pkg:raku/zef:lizmat/SBOM::Raku@0.0.14",
           "authors": [
             {
               "bom-ref": "ElizabethMattijsen",
@@ -97,7 +97,7 @@
           "publisher": "zef",
           "group": "zef:lizmat",
           "name": "SBOM::Raku",
-          "version": "0.0.13",
+          "version": "0.0.14",
           "description": "Raku specific SBOM functionality",
           "scope": "required",
           "licenses": [
@@ -109,27 +109,23 @@
               }
             }
           ],
-          "purl": "pkg:raku/zef:lizmat/SBOM::Raku@0.0.13",
+          "purl": "pkg:raku/zef:lizmat/SBOM::Raku@0.0.14",
           "externalReferences": [
             {
-              "url": "https://github.com/lizmat/SBOM-Raku",
+              "url": "https://codeberg.org/lizmat/SBOM-Raku",
               "type": "distribution"
             },
             {
-              "url": "https://raku.land/zef:lizmat/SBOM::Raku?v=0.0.13",
+              "url": "https://raku.land/zef:lizmat/SBOM::Raku?v=0.0.14",
               "type": "documentation"
             },
             {
-              "url": "https://github.com/lizmat/SBOM-Raku/issues",
+              "url": "https://codeberg.org/lizmat/SBOM-Raku/issues",
               "type": "issue-tracker"
             },
             {
               "url": "https://spdx.org/licenses/Artistic-2.0.json",
               "type": "license"
-            },
-            {
-              "url": "https://github.com/lizmat/SBOM-Raku/archive/refs/tags/0.0.13.zip",
-              "type": "source-distribution"
             },
             {
               "url": "mailto:liz@raku.rocks",
@@ -158,7 +154,7 @@
       "publisher": "Rakudo Core Developers",
       "group": "Rakudo Core Developers",
       "name": "Rakudo",
-      "version": "2026.07-23-gd9166ef4c",
+      "version": "2026.08-465-g66cb1418f",
       "description": "The Rakudo™ Compiler implementing the Raku® Programming Language",
       "scope": "required",
       "licenses": [
@@ -181,7 +177,7 @@
           "type": "issue-tracker"
         },
         {
-          "url": "https://github.com/rakudo/rakudo/archive/d9166ef4c.zip",
+          "url": "https://github.com/rakudo/rakudo/archive/66cb1418f.zip",
           "type": "source-distribution"
         },
         {
@@ -202,7 +198,7 @@
       "publisher": "The MoarVM Team",
       "group": "The MoarVM Team",
       "name": "Moar",
-      "version": "2026.07-4-gd0d4c1d29",
+      "version": "2026.08-9-gebc3f7069",
       "description": "Short for \"Metamodel On A Runtime\", MoarVM is a modern virtual machine built for the Rakudo compiler and the NQP Compiler Toolchain.",
       "scope": "required",
       "licenses": [
@@ -229,7 +225,7 @@
           "type": "chat"
         },
         {
-          "url": "https://github.com/MoarVM/MoarVM.git/archive/refs/tags/d0d4c1d29.zip",
+          "url": "https://github.com/MoarVM/MoarVM.git/archive/refs/tags/ebc3f7069.zip",
           "type": "source-distribution"
         }
       ]
@@ -241,7 +237,7 @@
       "type": "distribution"
     },
     {
-      "url": "https://raku.land/zef:raku-community-modules/if?v=0.1.5",
+      "url": "https://raku.land/zef:raku-community-modules/if?v=0.1.6",
       "type": "documentation"
     },
     {
@@ -253,7 +249,7 @@
       "type": "license"
     },
     {
-      "url": "https://github.com/raku-community-modules/if/archive/refs/tags/0.1.5.zip",
+      "url": "https://github.com/raku-community-modules/if/archive/refs/tags/0.1.6.zip",
       "type": "source-distribution"
     },
     {
@@ -269,7 +265,7 @@
       ]
     },
     {
-      "ref": "pkg:raku/zef:lizmat/SBOM::Raku@0.0.13",
+      "ref": "pkg:raku/zef:lizmat/SBOM::Raku@0.0.14",
       "dependsOn": [
         "Rakudo"
       ]

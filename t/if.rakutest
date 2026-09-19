@@ -1,6 +1,6 @@
 use Test;
 
-plan 5;
+plan 11;
 
 use lib $*PROGRAM.sibling("lib");
 
@@ -9,6 +9,12 @@ does-load-bar    'use if; use Bar',                            'a bare use after
 doesn't-load-bar 'use if; use Bar:if(0)',                      ':if(0) prevents loading a package';
 does-load-bar    'use if; use Bar:if($*RAKU.version ~~ v6.*)', 'we can use $*RAKU.version in :if';
 doesn't-load-bar 'use if; use Bar:if($*RAKU.version ~~ v7)',   'we can use $*RAKU.version in :if';
+does-load-bar    'use if; use Bar:if',                         'a bare :if loads the package';
+does-load-bar    'use if; constant YES = True; use Bar:if(YES)',   ':if sees a constant of the scope it is in';
+doesn't-load-bar 'use if; constant NO = False; use Bar:if(NO)',    ':if sees a false constant of the scope it is in';
+does-load-bar    'use if; sub yes() { True }; use Bar:if(yes())',  ':if can call a sub of the scope it is in';
+does-load-bar    'use if; use Bar:if(1):ver<0+>',                  'a true :if before another adverb loads the package';
+doesn't-load-bar 'use if; use Bar:if(0):ver<0+>',                  'a false :if before another adverb prevents loading';
 
 sub does-load-bar {
     my $*PACKAGE_LOADED = 0;
